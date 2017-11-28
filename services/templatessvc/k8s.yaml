@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: templatessvc-deployment
+  labels:
+    app: templatessvc
+spec:
+  selector:
+    matchLabels:
+      app: templatessvc
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: templatessvc
+    spec:
+      containers:
+      - name: templatessvc
+        image: 45.63.119.210:443/templatessvc:latest
+        imagePullPolicy: Always
+        ports:
+        - name: tpl-service
+          containerPort: 3000
+      imagePullSecrets:
+      - name: regsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tpl-service
+spec:
+  selector:
+    app: templatessvc
+  ports:
+  - port: 3000
+    targetPort: tpl-service

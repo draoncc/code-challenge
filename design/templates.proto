@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package templates;
+
+service Templates {
+  rpc GetTemplate(UUID) returns (Template) {}
+  rpc GetTemplateChain(UUID) returns (stream Template) {}
+
+  rpc HasTemplate(UUID) returns (Boolean) {}
+}
+
+message Template {
+  UUID id = 1;
+  string type = 2;
+  string data = 3;
+
+  string meta_name = 4;
+  UUID css_id = 5;
+  UUID meta_name_translation_id = 6;
+}
+
+message CSS {
+  UUID id = 1;
+  string data = 2;
+
+  string meta_name = 3;
+}
+
+message UUID {
+  string value = 1;
+}
+
+message Boolean {
+  bool value = 1;
+}

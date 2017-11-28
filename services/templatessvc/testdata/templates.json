@@ -1,0 +1,16 @@
+[
+  {
+    "id": {
+      "value": "1"
+    },
+    "data": "<p>foobar</p>",
+    "type": "test",
+    "meta_name": "Test Template",
+    "css_id": {
+      "value": "1"
+    },
+    "meta_name_translation_id": {
+      "value": "1"
+    }
+  }
+]
