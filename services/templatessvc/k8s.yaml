@@ -21,8 +21,6 @@ spec:
         ports:
         - name: tpl-service
           containerPort: 3000
-      imagePullSecrets:
-      - name: regsecret
 ---
 apiVersion: v1
 kind: Service

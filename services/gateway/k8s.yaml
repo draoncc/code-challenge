@@ -21,8 +21,6 @@ spec:
         ports:
         - name: api-service
           containerPort: 8080
-      imagePullSecrets:
-      - name: regsecret
 ---
 apiVersion: v1
 kind: Service

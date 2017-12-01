@@ -146,7 +146,11 @@ case "${1:-}" in
     ;;
   *)
     echo "usage:" >&2
+    echo "  $0 setup" >&2
+    echo "  $0 certs" >&2
+    echo "  $0 run-reg" >&2
     echo "  $0 clean" >&2
+    echo "  $0 reset-k8s" >&2
     exit 1
     ;;
 esac

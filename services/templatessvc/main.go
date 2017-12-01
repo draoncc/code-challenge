@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	addr       = flag.String("addr", "tpl-service:3000", "TCP server port")
+	addr       = flag.String("addr", "127.0.0.1:3000", "TCP server port")
 	jsonDBFile = flag.String("db", "testdata/templates.json", "JSON file containing a list of templates")
 )
 
